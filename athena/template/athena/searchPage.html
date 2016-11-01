@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Athena</title>
+
+<link href="/static/athena/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<link href="/static/athena/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="/static/athena/css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<link href="/static/athena/css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+<script type="text/javascript" src="/static/athena/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/athena/js/bootstrap.js"></script>
+<script type="text/javascript" src="/static/athena/js/bootstrap.min.js"></script>
+
+<script>
+	function f1(str){
+		url = "search?query=" + str;
+   		window.location = url;
+	}
+</script>	
+		<link rel="stylesheet" href="/static/athena/fonts/css/font-awesome.min.css">
+		
+
+   	<link rel="stylesheet" href="/static/athena/fonts/css/font-awesome.min.css">
+
+</head>
+<body>
+	
+<div class="container">
+	<div class="row header">
+		<div class="logo navbar-left">
+			<h1><a href="./">Athena </a></h1>
+		</div>
+		<div style="float:right;margin-right:20px;"class="logos">
+			<a href="#"><i style="font-size:27px;margin:0 10px"class="fa fa-facebook"></i></a>
+			<a href="#"><i style="font-size:27px;margin:0 10px"class="fa fa-twitter"></i></a>
+			<a href="#"><i style="font-size:27px;margin:0 10px"class="fa fa-youtube"></i></a>
+			<a href="#"><i style="font-size:27px;margin:0 10px"class="fa fa-linkedin"></i></a>
+		</div>
+		
+	</div>
+</div>
+
+
+<div class="container">
+<div style="margin-bottom:40px;position:relative;" class="h_search navbar-right">
+			
+				<form id="form">
+				<input type="text" style="width:86%"class="text" id="searchTxt" name="query" value="Search Catalog" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search Catalog';}">
+				<button style="display:inline-block" class="searchbtn" id="searchbtn" value="search">Search</button>
+				</form>
+			
+		</div>
+</div>
+
+<div class="category">
+
+<ul>
+<li>
+<span>TECHNOLOGY</span>
+</li>
+<li>
+<p onclick="f1('Android');">Android</p>
+</li>
+<li>
+<p onclick="f1('Big Data');">Big Data</p>
+</li>
+<li>
+<p onclick="f1('CSS');">CSS</p>
+</li>
+<li>
+<p onclick="f1('Development');">Development</p>
+</li>
+<li>
+<p onclick="f1('Finance');">Finance</p>
+</li>
+<li>
+<p onclick="f1('HTML');">HTML</p>
+</li>
+<li>
+<p onclick="f1('IOS');">IOS</p>
+</li>
+<li>
+<p onclick="f1('Java');">Java</p>
+</li>
+<li>
+<p onclick="f1('javascript');">JavaScript</p>
+</li>
+<li>
+<p onclick="f1('python');">Python</p>
+</li>
+
+<div class="line-separator"></div>
+
+
+<li>
+<span>CATEGORY</span>
+</li>
+<li>
+<div class="checkbox">
+  <label><input type="checkbox" class="domains" name= "personal-development"> Personal Development</input></label>
+</div>
+</li>
+<li>
+<div class="checkbox">
+  <label><input type="checkbox" class="domains" name= "business"> Business</input></label>
+</div>
+</li>
+<li>
+<div class="checkbox">
+  <label><input type="checkbox" class="domains" name= "math-and-logic"> Math and Logic</input></label>
+</div>
+</li>
+<li>
+<div class="checkbox">
+  <label><input type="checkbox" class="domains" name= "social-sciences"> Social Sciences</input></label>
+</div>
+</li>
+
+<li>
+<div class="checkbox">
+  <label><input type="checkbox" class="domains" name= "life-sciences"> Life Sciences</input></label>
+</div>
+</li>
+
+<li>
+<div class="checkbox">
+  <label><input type="checkbox" class="domains" name= "data-science"> Data Science</input></label>
+</div>
+</li>
+
+<li>
+<div class="checkbox">
+  <label><input type="checkbox" class="domains" name= "physical-science-and-engineering"> Physical Science and Engineering</input></label>
+</div>
+</li>
+
+<li>
+<div class="checkbox">
+  <label><input type="checkbox" class="domains" name= "language-learning"> Language Learning</input></label>
+</div>
+</li>
+
+<li>
+<div class="checkbox">
+  <label><input type="checkbox" class="domains" name= "arts-and-humanities"> Arts and Humanities</input></label>
+</div>
+</li>
+
+<li>
+<div class="checkbox">
+  <label><input type="checkbox" class="domains" name= "computer-science"> Computer Science</input></label>
+</div>
+</li>
+
+</ul>
+</div>
+		
+		
+		
+	<div class="container">
+		
+	<div class="horizontal-list">
+    </div>
+	</div>
+	<div class="footer_bg">
+	<div class="container">
+		<div class="row  footer">
+			<div class="copy text-center">
+				
+
+				<p class="link"><span>&#169; All rights reserved | Athena</span></p>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script>
+	var domains=[];
+	var objects=undefined;
+	var json_string="{{result | escapejs}}";
+	objects= JSON.parse(json_string);
+	json_string="{{request | escapejs}}";
+	var temp = JSON.parse(json_string);
+	domains=temp.domains;
+	if(domains==undefined){
+		domains=[];
+	}
+	spliceList=[];
+	for(x in domains){
+		if($("input[name="+domains[x]+"]").length){
+			$("input[name="+domains[x]+"]").prop('checked',true);
+		}
+		else{
+			spliceList.push(x);
+		}
+	}
+	for(var i=spliceList.length-1;i>=0;i=i-1){
+		domains.splice(spliceList[i],1);
+	}
+	console.log(objects);
+	console.log(domains);
+	
+	var loadData=function(objects){
+		$(".horizontal-list").empty();
+		if(objects==undefined || objects.elements==undefined || objects.elements.length==0){
+			console.log("empty");
+			var str=`<div class="listitem"  >
+						
+						<div class="listheading" style="margin-bottom:114%;">
+							<p>`+'No Results Found'+`</p>
+						</div>
+					</div>`	
+					$(".horizontal-list").append(str);
+			return;
+		}
+		
+		for(var x in objects.elements ){
+			var str=`<div class="listitem" id="`+ objects.elements[x].id +`">
+						<div class="listicon">
+							<img style="margin:0 auto"class="img-responsive"src="`+objects.elements[x].photoUrl+`">
+						</div>
+						<div class="listheading">
+							<a href="#"><p>`+objects.elements[x].name+`</p></a>
+						</div>
+						<div class="listdata" >
+							<p >`+objects.elements[x].description+`</p>
+						</div>
+						
+					</div>`;
+			$(".horizontal-list").append(str);
+		}
+
+	}
+	loadData(objects);
+	var loadCheckboxData=function(){
+		if(objects!=undefined && objects.elements!=undefined){
+				for(var x in objects.elements){
+					var flag=false;
+					if(domains==undefined || domains.length==0){
+						$('div[id='+objects.elements[x].id+']').css('display', 'block');
+						continue;
+					}
+					for(var y in domains){
+						var res=objects.elements[x].domainTypes.filter(function(obj){
+							return obj.domainId==domains[y];
+						});
+						if(res.length>0){
+							flag=1;
+							break;
+						}
+					}
+					if(flag){
+							$('div[id='+objects.elements[x].id+']').css('display', 'block');
+					}
+					else{
+						$('div[id='+objects.elements[x].id+']').css('display', 'none');	
+					}
+				}
+		}
+	}
+	$(document).ready(function(){
+		
+	
+		$('input[class=domains]').change(function(){
+			dname=$(this).attr('name');
+			id=domains.indexOf(dname);
+			value=$(this).prop("checked");
+			if(value){
+				if(id==-1){
+					domains.push(dname);
+				}
+			}
+			else{
+				if(id!=-1){
+					domains.splice(id,1);
+				}
+			}
+			loadCheckboxData();
+			console.log(domains);
+		});
+		function updateURL(parameter) {
+			if (history.pushState) {
+				var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + parameter;
+				window.history.pushState({path:newurl},'',newurl);
+			}
+		}
+		$("#searchbtn").click(function(){
+					txt=$('#searchTxt').val()
+					$.ajax({
+
+						url: 'search',
+						type: 'GET',
+						data: {"query":txt},
+						success: function(data) { console.log(data);
+							objects=data.result;
+							loadData(objects);
+							loadCheckboxData();
+							console.log(objects);
+							parameter="?query="+txt+"&domains=";
+							for(var i=0;i<domains.length;i++){
+								parameter+=domains[i]
+								if(i!=domains.length-1){
+									parameter+=",";
+								}
+							}
+							updateURL(parameter);
+						},
+						error: function(data) { alert('Failed!');console.log(data); },
+				
+					});
+				});			
+	});
+</script>
+</html>

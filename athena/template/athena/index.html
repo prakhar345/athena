@@ -1,0 +1,242 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Athena</title>
+
+<link href="/static/athena/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<link href="/static/athena/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="/static/athena/css/slider.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<link href="/static/athena/css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+<script src="/static/athena/js/slider.js" type="text/javascript"></script>
+<script type="text/javascript" src="/static/athena/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/athena/js/bootstrap.js"></script>
+<script type="text/javascript" src="/static/athena/js/bootstrap.min.js"></script>
+
+
+   	<link rel="stylesheet" href="/static/athena/fonts/css/font-awesome.min.css">
+<style>
+@media (min-width: 768px) {
+  #sliderFrame {
+    width: 750px;
+  }
+  #slider {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  #sliderFrame {
+    width: 970px;
+  }
+  #slider {
+    width: 970px;
+  }
+
+}
+@media (min-width: 1200px) {
+  #sliderFrame {
+    width: 1170px;
+  }
+  #slider {
+    width: 1170px;
+  }
+}
+
+#sliderFrame{
+border-radius:0;
+}
+
+#phonebck{
+display:none;
+width:100%;
+height:400px;
+}
+@media only screen and (max-width: 768px) {
+
+.h_search form input[type="submit"]{
+	padding:16px 0;
+}
+.h_search form input[type="text"]{
+	padding:4px 14px;
+}
+.h_search form{
+width:93.50%;
+}
+#slider{
+display:none;
+}
+#sliderFrame{
+width:100%;
+border-radius:0;
+}
+#slider{
+border-radius:0;
+}
+#phonebck{
+display:block;
+}
+}
+
+</style>
+</head>
+
+
+
+
+<body>
+
+<div class="container">
+	<div class="row header">
+		<div class="logo navbar-left">
+			<h1><a href="#">Athena </a></h1>
+		</div>
+		<div style="margin-right:0"class="logos">
+			<a href="#"><i style="font-size:27px;margin:0 10px"class="fa fa-facebook"></i></a>
+			<a href="#"><i style="font-size:27px;margin:0 10px"class="fa fa-twitter"></i></a>
+			<a href="#"><i style="font-size:27px;margin:0 10px"class="fa fa-youtube"></i></a>
+			<a href="#"><i style="font-size:27px;margin:0 10px"class="fa fa-linkedin"></i></a>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div style="border-radius:10px"class="row h_menu">
+		<nav class="navbar navbar-default navbar-left" role="navigation">
+		    
+		    <div style="border-radius:10px"class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		    </div>
+		   
+		    <div style="border-top-left-radius:10px;border-bottom-left-radius:10px" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a style="border-top-left-radius:10px;border-bottom-left-radius:10px"  href="#">Home</a></li>
+		        <li><a href="#">Technologies</a></li>
+		        <li><a href="#">About</a></li>
+		        <li><a href="#">Blog</a></li>
+		        <li><a href="#">Contact</a></li>
+		      </ul>
+		    </div>
+		   
+		</nav>
+		
+	</div>
+</div>
+<div style="text-align:center;overflow:hidden">
+<div style="overflow:hidden;"id="sliderFrame">
+		<div style="position:absolute;z-index:999;top:50%;left:48%; transform: translate(-58%, -50%);margin:0 auto" class="h_search navbar-right">
+			<form action="search" method="GET">
+				
+				{{ form }}
+				<input type="text" class="text" name="query" value="Search Catalog" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Your Text';}">
+				<input type="submit" value="search">
+			</form>
+		</div>
+		<div class="container" style="padding-left:0;">
+			<!--Credits : www.menucool.com-->
+        <div style="overflow:hidden;"id="slider">
+            
+            <img class="img-responsive" src="/static/athena/images/image-slider-1.jpg"  />
+            
+            <img class="img-responsive" src="/static/athena/images/image-slider-2.png"  />
+            
+        </div>
+		</div>
+		<div id="phonebck" style="background:url(/static/athena/images/phoneimage.jpg);">
+		
+		</div>
+		
+       
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="main_bg">
+	<div class="container">
+		<div class="main row">
+			<div class="col-md-3 images_1_of_4 text-center">
+				<span class="bg"><i class="fa fa-android"></i></span>
+				<h4><a href="#">Android Development</a></h4>
+				<p class="para">In this project-centered course*, you’ll design, build, and distribute your own unique application for the Android mobile platform.</p>
+				
+			</div>
+			<div class="col-md-3 images_1_of_4 bg1 text-center">
+				<span class="bg"><i class="fa fa-html5"></i></span>
+				<h4><a href="#">HTML5 Development</a></h4>
+				<p class="para"> Thanks to a growing number of software programs, it seems as if anyone can make a webpage. But what if you actually want to understand how the page was created?</p>
+				
+			</div>
+			<div class="col-md-3 images_1_of_4 bg1 text-center">
+				<span class="bg"><i class="fa fa-cloud"></i></span>
+				<h4><a href="#">Cloud Computing</a></h4>
+				<p class="para">The cloud is taking business by storm.  In fact, due to the extraordinary growth of the cloud, it has been described as a tornado, not a fluffy white floating object.</p>
+				
+			</div>		
+			<div class="col-md-3 images_1_of_4 bg1 text-center">
+				<span class="bg"><i class="fa fa-bar-chart-o"></i> </span>
+				<h4><a href="#">Data <br>Analytics</a></h4>
+				<p class="para">This course will expose you to the data analytics practices executed in the business. We will explore such key areas of data analytics as the analytical process, how data is created, stored and accessed.</p>
+				
+			</div>	
+		
+	</div>
+	</div>
+	</div>
+
+
+<div class="footer_bg">
+	<div class="container">
+		<div class="row  footer">
+			<div class="copy text-center">
+				<p class="link"><span>&#169; All rights reserved | Athena</span></p>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script>
+	function setHeader(xhr) {
+
+		xhr.setRequestHeader('Authorization', token);
+	}
+	var contentType ="application/x-www-form-urlencoded;Access-Control-Allow-Origin; charset=utf-8";
+
+	$(document).ready(function(){
+		$("#tak").click(function(){
+			$.ajax({
+
+				url: '/athena/search',
+				
+				type: 'GET',
+				
+				
+				success: function(data) { alert("Success"); },
+				error: function(data) { alert('Failed!');console.log(data); },
+				
+			});
+			
+			
+			
+		}); 
+					
+	});
+	  
+
+					
+</script>
+</html>
